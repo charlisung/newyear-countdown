@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react';
-import logo from './images/spinner.gif';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Spinner from "./Spinner";
+import Timebox from "./Timebox";
 
 function App() {
-  const [nextYear, setNextYear] = useState('');
-  const [days, setDays] = useState('');
-  const [hours, setHours] = useState('');
-  const [minutes, setMinutes] = useState('');
-  const [seconds, setSeconds] = useState('');
+  const [nextYear, setNextYear] = useState("");
+  const [days, setDays] = useState("");
+  const [hours, setHours] = useState("");
+  const [minutes, setMinutes] = useState("");
+  const [seconds, setSeconds] = useState("");
   const [afterLoading, setAfterLoading] = useState(false);
   const [spinner, setSpinner] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setSpinner(false);
@@ -48,30 +51,15 @@ function App() {
 
   return (
     <div className="App">
-      {spinner && <img src={logo}></img>}
+      {spinner && <Spinner />}
       {afterLoading && (
-        <div className="box">
-          <h1>New Year Countdown</h1>
-          <h1 className="next-year">{nextYear}</h1>
-          <div className="container">
-            <div className="time-box">
-              <h2>{days}</h2>
-              <small>days</small>
-            </div>
-            <div className="time-box">
-              <h2>{hours}</h2>
-              <small>hours</small>
-            </div>
-            <div className="time-box">
-              <h2>{minutes}</h2>
-              <small>minutes</small>
-            </div>
-            <div className="time-box">
-              <h2>{seconds}</h2>
-              <small>seconds</small>
-            </div>
-          </div>
-        </div>
+        <Timebox
+          nextYear={nextYear}
+          days={days}
+          hours={hours}
+          minutes={minutes}
+          seconds={seconds}
+        />
       )}
     </div>
   );
