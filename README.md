@@ -1,5 +1,27 @@
-# New Year Countdown
 
-Countdown clock till next New Year
+# NewYear Countdown ⏰
 
-![demo](https://github.com/charlisung/newyear-countdown/blob/main/Kapture%202021-09-02%20at%2018.39.34.gif)
+This is the first react app I built. It automatically calculates next year's new year and shows how much time left from current time.
+## 🛠 Skills
+React, CSS
+
+
+## Lessons Learned
+
+- React hooks: useState, useEffect
+- setTimeout, setInterval
+- new Date() constructor
+- build loading spinner only with css 
+## Demo
+![countdown](countdown.gif)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  yarn
+  yarn start
+```
+

@@ -1,8 +1,6 @@
 export default function Timebox({ nextYear, days, hours, minutes, seconds }) {
   return (
     <div className="box">
-      <h1>New Year Countdown</h1>
-      <h1 className="next-year">{nextYear}</h1>
       <div className="container">
         <div className="time-box">
           <h2>{days}</h2>

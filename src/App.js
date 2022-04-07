@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./css/App.css";
 import Spinner from "./Spinner";
 import Timebox from "./Timebox";
 
@@ -17,7 +17,7 @@ function App() {
       setSpinner(false);
       setAfterLoading(true);
       countdown();
-    }, 2000);
+    }, 500);
   }, []);
 
   const countdown = () => {
@@ -61,6 +61,7 @@ function App() {
           seconds={seconds}
         />
       )}
+      <h1 className="next-year">{nextYear}</h1>
     </div>
   );
 }
